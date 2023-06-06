@@ -1,7 +1,7 @@
 $primary-color: #9e83ea;
 $secondary-color: #f5f2ff;
 $text-base-color: #9491b1;
-*{
+* {
   -ms-overflow-style: none;
 }
 ::-webkit-scrollbar {
@@ -163,11 +163,10 @@ body {
   gap: 20px;
   overflow: hidden;
 
-
   .card {
     overflow-y: scroll;
     min-width: 355px;
-    max-width: 24%;
+    max-width: 23%;
     padding: 20px;
     box-sizing: border-box;
     background-color: white;
@@ -394,6 +393,266 @@ body {
     .nextButton {
       background-color: $primary-color;
       color: white;
+    }
+  }
+}
+
+.walletMenu {
+  .headWallet {
+    display: flex;
+    gap: 20px;
+    .chartWallet {
+      span {
+        font-size: 20px;
+      }
+      width: 65%;
+      .precentage {
+        // height: 520px;
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+      }
+      .history {
+        margin-top: 20px;
+        background-color: white;
+        padding: 20px;
+      }
+    }
+
+    .cardWallet {
+      width: 35%;
+      // display: flex;
+      // justify-content: flex-end;
+      .wall {
+        color: white;
+        width: 100%;
+      }
+      .credit {
+        background-color: $primary-color;
+        height: 160px;
+        // width: 85%;
+        border-radius: 10px 10px 0px 0px;
+        padding: 20px;
+        span {
+          font-size: 18px;
+        }
+        .total {
+          text-align: center;
+          margin-top: 20px;
+          font-size: 50px;
+          font-weight: 700;
+        }
+      }
+      .bottomSide {
+        background-color: #7f68bd;
+        height: 100px;
+        padding-left: 20px;
+        border-radius: 0px 0px 10px 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 20px;
+        color: #dfdeeb;
+        margin-bottom: 20px;
+      }
+      .exchange {
+        // height: 300px;
+        // margin-bottom: 50px;
+        padding-bottom: 20px;
+        background-color: white;
+        border-radius: 10px;
+        .head {
+          color: #828196;
+          display: flex;
+          padding: 20px;
+          justify-content: space-between;
+          font-size: 18px;
+        }
+        .main {
+          // margin-left: 40px;
+          width: 100%;
+
+          input {
+            margin-bottom: 10px;
+            height: 50px;
+            width: 90%;
+            padding-left: 20px;
+            border: 2px solid $primary-color;
+            border-radius: 10px;
+            font-size: 18px;
+          }
+        }
+      }
+      .center {
+        display: flex;
+        justify-content: center;
+      }
+      .exchangeButton {
+        // margin-left: 32px;
+        cursor: pointer;
+        width: 95%;
+        height: 50px;
+        background-color: $primary-color;
+        color: white;
+        font-size: 18px;
+        border: 0px;
+        border-radius: 10px;
+        transition: 1s;
+      }
+      .exchangeButton:hover {
+        background-color: #44356d;
+      }
+    }
+  }
+}
+
+.w100 {
+  width: 100%;
+}
+.history {
+  border-radius: 20px;
+}
+
+.detailHistory {
+  width: 90%;
+  border: 1px solid $primary-color;
+  border-radius: 20px;
+  height: 60px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 40px;
+  padding-right: 40px;
+
+  .amount {
+    font-size: 20px;
+    font-weight: 600;
+
+    .plus {
+      color: green;
+    }
+
+    .minus {
+      color: red;
+    }
+  }
+}
+
+.settings {
+  background-color: white;
+  border-radius: 20px;
+  padding: 30px;
+  display: flex;
+  span {
+    font-size: 18px;
+  }
+  .selectSettings {
+    width: 250px;
+    // background-color: rebeccapurple;
+    border-right: 1px solid $primary-color;
+  }
+  .selectSettingButton {
+    cursor: pointer;
+    height: 50px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    transition: 1s;
+  }
+  .delete {
+    color: red;
+  }
+  .active {
+    background-color: $primary-color;
+    color: white;
+  }
+}
+
+.Profile {
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 80%;
+  height: 700px;
+  // background-color: blue;
+  .edit {
+    width: 70px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    border-radius: 20px;
+    cursor: pointer;
+    color: black;
+    // transition: 0.5s;
+  }
+  .edit:hover {
+    background-color: $text-base-color;
+    color: white;
+  }
+  .mainProfile {
+    color: $text-base-color;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+    border-radius: 20px;
+    padding: 20px;
+    border: 1px solid $primary-color;
+    .left {
+      display: flex;
+      gap: 30px;
+    }
+    .profilePicture {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+    }
+    .contents {
+      p {
+        margin-bottom: 1px;
+        margin-top: 1px;
+      }
+    }
+    .name {
+      font-weight: 600;
+      font-size: 18px;
+      color: black;
+    }
+  }
+  .personalInfo {
+    margin-top: 20px;
+    border-radius: 20px;
+    padding: 20px;
+    // display: flex;
+    // justify-content: space-between;
+    border: 1px solid $primary-color;
+    .title {
+      margin-top: 20px;
+      color: $text-base-color;
+    }
+    .response {
+      color: black;
+      font-size: 20px;
+      font-weight: 400;
+      margin-top: -10px;
+    }
+    .left {
+      color: $text-base-color;
+      margin-top: 0px;
+    }
+    .contentCenter {
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
     }
   }
 }

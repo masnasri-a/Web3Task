@@ -39,7 +39,7 @@ const CardProject = (props: any) => {
   return (
     <div className="cardProject">
       <div className="tags">
-        <span>{remainingTime}</span>
+        <span>{remainingTime?remainingTime:"Loading"}</span>
         <div className="editProject">
           <span>Research</span>
           <div className="edit">
