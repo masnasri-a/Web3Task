@@ -4,7 +4,7 @@ import ModalPick from "./modalPick";
 
 const Card = (props: any) => {
   const [show, setShow] = useState(false);
-  const [data, setData] = useState(['a','b','c','d','e'])
+  const [data, setData] = useState(['a','b','c','d','e','f'])
   return (
     <div className="cardContainer">
         {

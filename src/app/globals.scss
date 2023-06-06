@@ -1,6 +1,17 @@
 $primary-color: #9e83ea;
 $secondary-color: #f5f2ff;
 $text-base-color: #9491b1;
+*{
+  -ms-overflow-style: none;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+body {
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
 .body {
   position: absolute;
   top: 0px;
@@ -121,6 +132,7 @@ $text-base-color: #9491b1;
 }
 
 .backgroundHome {
+  overflow: hidden;
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
@@ -149,9 +161,13 @@ $text-base-color: #9491b1;
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
+  overflow: hidden;
+
 
   .card {
-    width: 355px;
+    overflow-y: scroll;
+    min-width: 355px;
+    max-width: 24%;
     padding: 20px;
     box-sizing: border-box;
     background-color: white;
@@ -289,7 +305,6 @@ $text-base-color: #9491b1;
   .project {
     padding: 0px 20px 20px 20px;
     width: 24%;
-    overflow: hidden;
     background-color: white;
     border-radius: 10px;
     .head {
