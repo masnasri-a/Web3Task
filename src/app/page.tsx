@@ -11,11 +11,11 @@ import Support from "./Menu/support";
 export default function Home() {
   const [menu, setMenu] = useState(0);
   const content = [
-    <HomeMenu />,
-    <Project />,
-    <Wallet />,
-    <Settings />,
-    <Support />,
+    <HomeMenu key={0} />,
+    <Project key={1} />,
+    <Wallet key={2} />,
+    <Settings key={3} />,
+    <Support key={4} />,
   ];
   return (
     <div className="body">
