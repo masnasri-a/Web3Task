@@ -1,0 +1,384 @@
+$primary-color: #9e83ea;
+$secondary-color: #f5f2ff;
+$text-base-color: #9491b1;
+.body {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background-color: $secondary-color;
+  width: 100vw;
+  height: 100vh;
+}
+.sidebar {
+  // position: fixed;
+  // top: 0px;
+  margin-top: 100px;
+
+  padding: 20px;
+  width: 300px;
+  background-color: white;
+}
+
+.title {
+  span {
+    color: $primary-color;
+  }
+  p {
+    margin-top: -15px;
+    margin-bottom: 25px;
+    color: $text-base-color;
+  }
+  color: black;
+}
+
+.profile {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.header {
+  background-color: white;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 20px;
+  width: 100vw;
+  height: 100px;
+  .profileImage {
+    border-radius: 50%;
+  }
+
+  .verticalLine {
+    height: 60px;
+    border-left: 2px solid $text-base-color;
+    margin: 0 auto;
+  }
+  .menuRight {
+    display: flex;
+    align-items: center;
+    margin-right: 50px;
+    gap: 20px;
+    p {
+      font-weight: 600;
+      font-size: large;
+    }
+    .user {
+      p {
+        font-weight: 600;
+        color: rebeccapurple;
+        margin-bottom: 0px;
+      }
+      span {
+        display: flex;
+        color: #9491b1;
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.menuText {
+  color: $text-base-color;
+  margin-bottom: 20px;
+}
+.selectedMenu {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  cursor: pointer;
+}
+
+.selectedMenuActive {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  align-items: center;
+  border-radius: 10px;
+  background-color: #9e83ea;
+  color: white;
+  transition: 1s;
+}
+
+.menus {
+  display: flex;
+
+  height: calc(100vh);
+}
+
+.mainMenu {
+  margin-top: 120px;
+  width: calc(100vw - 380px);
+  margin-left: 20px;
+  height: calc(100vh - 150px);
+  overflow: scroll;
+}
+
+.backgroundHome {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 20px;
+  height: 200px;
+  background-image: radial-gradient(
+    circle 311px at 8.6% 27.9%,
+    rgba(62, 147, 252, 0.57) 12.9%,
+    rgba(239, 183, 192, 0.44) 91.2%
+  );
+  span {
+    color: black;
+    font-weight: 500;
+    font-size: 14px;
+  }
+  p {
+    font-size: 16px;
+    font-weight: 700;
+  }
+}
+
+.cardContainer {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+
+  .card {
+    width: 355px;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: white;
+    border-radius: 20px;
+
+    .cardHeader {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+      span {
+        font-weight: 600;
+        font-size: 18px;
+        width: 80%;
+      }
+
+      .more {
+        cursor: pointer;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 1s;
+        border-radius: 50%;
+      }
+
+      .more:hover {
+        background-color: $text-base-color;
+        color: white;
+      }
+    }
+    .cardFooter {
+      margin-top: 20px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 10px;
+      .side {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .coin {
+        background-color: gold;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 700;
+        font-size: 18px;
+      }
+
+      .deadline {
+        background-color: $primary-color;
+        max-width: 130px;
+        padding: 10px;
+        border-radius: 10px;
+        color: white;
+      }
+
+      .pick {
+        cursor: pointer;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        border: 2px solid $text-base-color;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .pick:hover {
+        background-color: #9491b1;
+        color: white;
+      }
+    }
+  }
+}
+
+.modal {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100vh;
+  width: 100vw;
+  background-color: #2c228a2c;
+
+  .mainModal {
+    flex: 1;
+    min-width: 400px;
+    max-width: 600px;
+    background-color: white;
+    min-height: 400px;
+    position: absolute;
+    top: calc(50vh - 200px);
+    left: calc(50vw - 200px);
+    border-radius: 20px;
+  }
+
+  .headModal {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    .close {
+      cursor: pointer;
+    }
+  }
+
+  .mainContentModal {
+    padding: 20px;
+    width: 90%;
+  }
+  .additionalContentModal {
+    padding-left: 20px;
+  }
+  .pickButton {
+    cursor: pointer;
+    height: 40px;
+    width: calc(100% - 40px);
+    margin: 20px;
+    border-radius: 10px;
+    background-color: $primary-color;
+    color: white;
+    border: 0px;
+  }
+  .pickButton:hover {
+    background-color: #7f68bd;
+  }
+}
+
+.projectMenu {
+  display: flex;
+  gap: 20px;
+  .project {
+    padding: 0px 20px 20px 20px;
+    width: 24%;
+    overflow: hidden;
+    background-color: white;
+    border-radius: 10px;
+    .head {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .total {
+      color: $text-base-color;
+      min-width: 30px;
+      max-width: 40px;
+      padding-left: 5px;
+      padding-right: 5px;
+      height: 30px;
+      border-radius: 10px;
+      border: 1px solid $text-base-color;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .mainTask {
+      gap: 20px;
+    }
+  }
+}
+
+.cardProject {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 1px solid $text-base-color;
+  border-radius: 20px;
+  padding: 10px;
+  .tags {
+    display: flex;
+    justify-content: space-between;
+    span {
+      border-radius: 15px;
+      padding: 5px 10px 5px 10px;
+      border: 1px solid $text-base-color;
+      color: $text-base-color;
+      font-size: 14px;
+    }
+
+    .editProject {
+      gap: 10px;
+      display: flex;
+      align-items: center;
+      padding-right: 10px;
+
+      .edit {
+        color: #9491b1;
+        cursor: pointer;
+      }
+    }
+  }
+  .title {
+    font-size: 18px;
+  }
+  .progress {
+    display: flex;
+    gap: 2px;
+  }
+  .progressSuccess {
+    background-color: $primary-color;
+    width: 10%;
+    height: 10px;
+    border-radius: 5px;
+  }
+  .progressFailed {
+    background-color: $text-base-color;
+    width: 10%;
+    height: 10px;
+    border-radius: 5px;
+  }
+  .action {
+    margin-top: 10px;
+    display: flex;
+    justify-content: flex-end;
+    button {
+      width: 37%;
+      height: 40px;
+      border-radius: 10px;
+      border: 0px;
+      cursor: pointer;
+    }
+
+    .nextButton {
+      background-color: $primary-color;
+      color: white;
+    }
+  }
+}
